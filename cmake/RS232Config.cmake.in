@@ -3,13 +3,13 @@ include(CMakeFindDependencyMacro)
 
 #list(APPEND CMAKE_MODULE_PATH ${JSONUTILS_CMAKE_DIR})
 # NOTE: to find FindRapidJSON.cmake
-find_dependency(RapidJSON @MIN_RapidJSON_VERSION@)
+# find_dependency(RapidJSON @MIN_RapidJSON_VERSION@)
 #list(REMOVE_AT CMAKE_MODULE_PATH -1)
 
 #find_dependency(boost_regex @MIN_BOOST_VERSION@)
 
 if(NOT TARGET RS232::RS232)
-    include("${RS232_CMAKE_DIR}/RS232sTargets.cmake")
+    include("${RS232_CMAKE_DIR}/RS232Targets.cmake")
 endif()
 
 set(RS232_lIBRARIES RS232::RS232)
